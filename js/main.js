@@ -1,6 +1,8 @@
 /*creare un array di oggetti per rappresentare i membri del team.
 Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.*/
 
+const container = document.getElementById("container");
+
 //crea arrey oggetti
 const team = 
 [
@@ -50,14 +52,9 @@ const team =
 
 console.log(team);
 
-//Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+//Stampare sul DOM, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 for (let i = 0; i < team.length; i++) {
     let teamObj = team[i];
 
-    console.log("membro", i + 1);
-
-    for (let key in teamObj) {
-        console.log(teamObj[key]);
-    }
-    
+    container.innerHTML += `membro ${i+1}: ${teamObj.nome}, ${teamObj.ruolo}, ${teamObj.foto} / `;
 }
