@@ -21,7 +21,7 @@ function arrRandomNumMinMax (howMany, numMin, numMax) {
 }
 
 //crea input
-function createInput(type, value, id) {
+function creaInput(type, value, id) {
     const newElement = document.createElement("input");
     newElement.type = type;
     newElement.value = value;
@@ -29,3 +29,4 @@ function createInput(type, value, id) {
     
     return newElement;
 }
+
